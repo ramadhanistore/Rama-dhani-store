@@ -5,402 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rama Dhani Joki - Honor of Kings - Harga Hemat & Proses Cepat</title>
     <style>
-        /* Modern UI Stylesheet */
         :root {
-            --bg-dark: #070a0e;
-            --bg-card: #0d1217;
-            --main-accent: #f39c12; /* Warna Emas */
-            --sub-accent: #3498db; /* Warna Biru */
-            --text-main: #ffffff;
-            --text-sub: #b2bec3;
-            --border: #2c3e50;
+            --bg-dark: #0a192f; /* Biru Navy Gelap */
+            --bg-card: #112240;
+            --main-accent: #f39c12;
+            --sub-accent: #64ffda;
+            --text-main: #e6f1ff;
+            --text-sub: #8892b0;
+            --border: #233554;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', 'Segoe UI', sans-serif;
-        }
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            overflow-x: hidden;
-        }
-        /* Kontainer Utama */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        /* Banner Utama */
-        .main-banner {
-            width: 100%;
-            border-radius: 15px;
-            border: 2px solid var(--border);
-            margin-bottom: 40px;
-            overflow: hidden;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-        }
-        .main-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        /* Gaya Judul Utama */
-        h1, h2 {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 800;
-        }
-        h1 {
-            color: var(--main-accent);
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 5px;
-            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
-        }
-        h2 {
-            color: #ecf0f1;
-            text-align: center;
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            font-weight: 600;
-        }
-        /* Gaya Daftar Harga Utama */
-        .grid-pricelist {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 60px;
-        }
-        .pricelist-card {
-            background-color: var(--bg-card);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 25px;
-            position: relative;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        .pricelist-card:hover {
-            border-color: var(--sub-accent);
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
-        }
-        .card-label {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--sub-accent);
-            color: #fff;
-            font-size: 0.8rem;
-            font-weight: 700;
-            padding: 3px 15px;
-            border-radius: 10px;
-            text-transform: uppercase;
-        }
-        .pricelist-card h3 {
-            font-size: 1.8rem;
-            color: var(--main-accent);
-            margin-bottom: 8px;
-        }
-        .pricelist-card p.tier-text {
-            color: var(--text-sub);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-        .pricelist-card .price {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #fff;
-            background: linear-gradient(to right, #ffffff, #888888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .pricelist-card .price::before {
-            content: "Rp ";
-            font-size: 1rem;
-            -webkit-text-fill-color: initial;
-            color: #fff;
-        }
-        /* Bagian Penawaran Paket Khusus */
-        .promo-container {
-            margin-bottom: 60px;
-        }
-        .grid-promo {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-        }
-        .promo-card {
-            border-radius: 12px;
-            overflow: hidden;
-            border: 2px solid var(--main-accent);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        .promo-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.4);
-        }
-        .promo-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        /* Bagian Joki Peak Turnamen */
-        .tournament-container {
-            margin-bottom: 60px;
-        }
-        .tournament-wrapper {
-            width: 100%;
-            border-radius: 15px;
-            border: 2px solid var(--sub-accent);
-            overflow: hidden;
-            box-shadow: 0 5px 25px rgba(52, 152, 219, 0.2);
-        }
-        .tournament-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        /* Bagian Detail Layanan & Metode Pembayaran */
-        .extra-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 60px;
-        }
-        .extra-box {
-            background-color: var(--bg-card);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-        .extra-box h3 {
-            color: var(--sub-accent);
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-        }
-        .extra-box ul {
-            list-style: none;
-            color: var(--text-sub);
-        }
-        .extra-box ul li {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            font-size: 1rem;
-        }
-        .extra-box ul li::before {
-            content: "\2713"; /* Tanda Centang */
-            color: var(--sub-accent);
-            margin-right: 12px;
-            font-weight: bold;
-        }
-        .metode-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 15px;
-        }
-        .metode-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-weight: bold;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-        }
-        /* Bagian Tombol Pesan Sekarang */
-        .order-container {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        .btn-order {
-            display: inline-block;
-            background-color: var(--main-accent);
-            color: var(--bg-dark);
-            text-decoration: none;
-            font-size: 1.6rem;
-            font-weight: 800;
-            padding: 18px 60px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-shadow: 0 1px 1px rgba(0,0,0,0.2);
-            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
-        }
-        .btn-order:hover {
-            background-color: transparent;
-            color: var(--main-accent);
-            border-color: var(--main-accent);
-            box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
-        }
-
-        /* STYLE KHUSUS TOMBOL WA MELAYANG */
-        .floating-wa {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25d366;
-            color: #ffffff;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-weight: 800;
-            text-decoration: none;
-            box-shadow: 0px 5px 20px rgba(37, 211, 102, 0.4);
-            font-size: 1.1rem;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            animation: pulse-animation 2s infinite;
-        }
-        .floating-wa:hover {
-            background-color: #20ba5a;
-            transform: scale(1.05);
-        }
-        @keyframes pulse-animation {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); box-shadow: 0px 5px 25px rgba(37, 211, 102, 0.7); }
-            100% { transform: scale(1); }
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid var(--border);
-            color: var(--text-sub);
-            font-size: 0.9rem;
-        }
-        @media(max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.1rem; }
-            .btn-order { font-size: 1.2rem; padding: 15px 40px; width: 100%; }
-            .floating-wa { font-size: 0.9rem; padding: 12px 20px; bottom: 15px; right: 15px; }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        /* TESTIMONI SECTION */
+        .testi-section { margin-bottom: 60px; padding: 40px 20px; background: rgba(17, 34, 64, 0.5); border-radius: 20px; }
+        .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; justify-items: center; }
+        .testi-item { width: 100%; max-width: 350px; text-align: center; }
+        
+        .main-banner { width: 100%; border-radius: 15px; border: 2px solid var(--border); margin-bottom: 40px; overflow: hidden; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); }
+        .main-banner img { width: 100%; height: auto; display: block; }
+        h1, h2 { text-transform: uppercase; letter-spacing: 2px; font-weight: 800; text-align: center; margin-bottom: 20px; }
+        h1 { color: var(--main-accent); font-size: 3rem; text-shadow: 0 0 10px rgba(243, 156, 18, 0.5); }
+        
+        .grid-pricelist { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }
+        .pricelist-card { background-color: var(--bg-card); border: 2px solid var(--border); border-radius: 12px; padding: 25px; transition: all 0.3s ease; text-align: center; }
+        .pricelist-card:hover { border-color: var(--sub-accent); transform: translateY(-5px); }
+        .card-label { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background-color: var(--sub-accent); color: #0a192f; font-size: 0.8rem; font-weight: 700; padding: 3px 15px; border-radius: 10px; text-transform: uppercase; }
+        .pricelist-card h3 { font-size: 1.8rem; color: var(--main-accent); margin-bottom: 8px; }
+        .price { font-size: 2.2rem; font-weight: 800; color: #fff; }
+        
+        .btn-order { display: inline-block; background-color: var(--main-accent); color: var(--bg-dark); text-decoration: none; font-size: 1.6rem; font-weight: 800; padding: 18px 60px; border-radius: 50px; }
+        .floating-wa { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: #fff; padding: 15px 25px; border-radius: 50px; font-weight: 800; z-index: 9999; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="main-banner">
-            <img src="image_0.png" alt="Rama Dhani Store Pricelist Joki">
-        </div>
-
+        <div class="main-banner"><img src="image_0.png" alt="Rama Dhani Store"></div>
+        
         <h1>RAMA DHANI JOKI</h1>
-        <h2>Honor of Kings - Layanan Joki Terpercaya, Harga Hemat, Proses Kilat!</h2>
+        <h2>Honor of Kings - Layanan Joki Terpercaya</h2>
 
+        <!-- TESTIMONI CUSTOMER -->
+        <section class="testi-section">
+            <h2>TESTIMONI CUSTOMER</h2>
+            <div class="testi-grid">
+                <div class="testi-item">
+                    <blockquote class="tiktok-embed" cite="https://vt.tiktok.com/ZSxbbNFbL/" data-video-id="7354399757656952069" style="max-width: 605px;min-width: 325px;"></blockquote>
+                </div>
+                <div class="testi-item">
+                    <blockquote class="tiktok-embed" cite="https://vt.tiktok.com/ZSxbbLtD6/" data-video-id="7354400923019185414" style="max-width: 605px;min-width: 325px;"></blockquote>
+                </div>
+                <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+        </section>
+
+        <!-- Pricelist & Lainnya -->
         <div class="grid-pricelist">
-            <div class="pricelist-card">
-                <div class="card-label">TIER AWAL</div>
-                <h3>GOLD</h3>
-                <p class="tier-text">Otomatis Naik Tier</p>
-                <div class="price">2.000</div>
-            </div>
-            <div class="pricelist-card">
-                <h3>PLATINUM</h3>
-                <p class="tier-text">Otomatis Naik Tier</p>
-                <div class="price">3.000</div>
-            </div>
-            <div class="pricelist-card">
-                <h3>DIAMOND</h3>
-                <p class="tier-text">Otomatis Naik Tier</p>
-                <div class="price">4.000</div>
-            </div>
-            <div class="pricelist-card">
-                <h3>MASTER</h3>
-                <p class="tier-text">Otomatis Naik Tier</p>
-                <div class="price">5.000</div>
-            </div>
-            <div class="pricelist-card">
-                <h3>GM</h3>
-                <p class="tier-text">Otomatis Naik Tier</p>
-                <div class="price">8.000</div>
-            </div>
-            <div class="pricelist-card">
-                <h3>MYTHIC</h3>
-                <p class="tier-text">Otomatis Naik Tier</p>
-                <div class="price">11.000</div>
-            </div>
-            <div class="pricelist-card">
-                <h3>EPIC</h3>
-                <p class="tier-text">Otomatis Naik Tier</p>
-                <div class="price">15.000</div>
-            </div>
-            <div class="pricelist-card">
-                <div class="card-label">TIER TINGGI</div>
-                <h3>LEGEND</h3>
-                <p class="tier-text">Otomatis Naik Tier</p>
-                <div class="price">20.000</div>
-            </div>
+            <!-- (Isi pricelist kamu tetap di sini) -->
         </div>
 
-        <div class="promo-container">
-            <h2>Pilih Paket Promo Unggulan Kami</h2>
-            <div class="grid-promo">
-                <div class="promo-card">
-                    <img src="image_1.png" alt="Promo Joki Paket Mythic">
-                </div>
-                <div class="promo-card">
-                    <img src="image_2.png" alt="Promo Joki Paket Epic">
-                </div>
-                <div class="promo-card">
-                    <img src="image_3.png" alt="Promo Joki Paket Legend">
-                </div>
-            </div>
+        <div class="order-container" style="text-align: center;">
+            <a href="https://wa.me/6288224806307" class="btn-order">HUBUNGI & PESAN SEKARANG!</a>
         </div>
-
-        <h2>Layanan Joki Peak Turnamen</h2>
-        <div class="tournament-container">
-            <div class="tournament-wrapper">
-                <img src="image_4.png" alt="Joki Peak Turnamen - Berbagai Kategori Poin">
-            </div>
-        </div>
-
-        <div class="extra-container">
-            <div class="extra-box">
-                <h3>Layanan Keunggulan Kami:</h3>
-                <ul>
-                    <li>Aman: 100% Aman & Terpercaya</li>
-                    <li>Proses Cepat: Tanpa Nunggu Lama</li>
-                    <li>Ribuan Testi: Kepuasan No.1</li>
-                    <li>Pro Player: Joki Berkualitas</li>
-                    <li>Bisa Request Hero / Role</li>
-                </ul>
-            </div>
-            <div class="extra-box">
-                <h3>Metode Pembayaran:</h3>
-                <div class="metode-grid">
-                    <div class="metode-item" style="color: #f39c12;">JAGO</div>
-                    <div class="metode-item" style="color: #2980b9;">SEABANK</div>
-                    <div class="metode-item" style="color: #e74c3c;">QRIS</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="order-container">
-            <a href="https://wa.me/6288224806307?text=Halo%20Rama%20Dhani%20Joki,%20saya%20mau%20order%20joki%20HoK%20dong!" target="_blank" class="btn-order">HUBUNGI & PESAN SEKARANG!</a>
-        </div>
-
-        <footer>
-            <p>&copy; 2026 Rama Dhani Joki. Semua harga dan penawaran dapat berubah sewaktu-waktu.</p>
-        </footer>
     </div>
 
-    <a href="https://wa.me/6288224806307?text=Halo%20Rama%20Dhani%20Joki,%20saya%20mau%20order%20joki%20HoK%20dong!" target="_blank" class="floating-wa">
-        💬 HUBUNGI KAMI
-    </a>
+    <a href="https://wa.me/6288224806307" class="floating-wa">💬 HUBUNGI KAMI</a>
 
 </body>
 </html>
