@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rama Dhani Joki - Honor of Kings - Harga Hemat & Proses Cepat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         /* Modern UI Stylesheet */
         :root {
@@ -165,6 +166,35 @@
             height: auto;
             display: block;
         }
+
+        /* --- STYLE BARU: FLOATING/HORIZONTAL TIKTOK TESTIMONI --- */
+        .tiktok-testi-section {
+            margin-bottom: 60px;
+        }
+        .tiktok-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+        .tiktok-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 550px; /* Menjaga tinggi agar seimbang saat loading script */
+        }
+        /* Memastikan embed tiktok responsif */
+        .tiktok-embed {
+            margin: 0 !important;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+
         /* Bagian Detail Layanan & Metode Pembayaran */
         .extra-container {
             display: grid;
@@ -288,6 +318,9 @@
             h2 { font-size: 1.1rem; }
             .btn-order { font-size: 1.2rem; padding: 15px 40px; width: 100%; }
             .floating-wa { font-size: 0.9rem; padding: 12px 20px; bottom: 15px; right: 15px; }
+            .tiktok-grid {
+                grid-template-columns: 1fr; /* Stack vertikal rapi di HP */
+            }
         }
     </style>
 </head>
@@ -368,6 +401,37 @@
             </div>
         </div>
 
+        <div class="tiktok-testi-section">
+            <h2 style="color: var(--main-accent);">🔥 Video Testimoni Player & Hasil Joki 🔥</h2>
+            <div class="tiktok-grid">
+                
+                <div class="tiktok-card">
+                    <blockquote class="tiktok-embed" data-video-id="ZSxpBs5J4" style="max-width: 605px;min-width: 325px;" > 
+                        <section> <a target="_blank" href="https://www.tiktok.com/video/ZSxpBs5J4">Liat testimoni di TikTok</a> </section> 
+                    </blockquote>
+                </div>
+
+                <div class="tiktok-card">
+                    <blockquote class="tiktok-embed" data-video-id="ZSxpBghPK" style="max-width: 605px;min-width: 325px;" > 
+                        <section> <a target="_blank" href="https://www.tiktok.com/video/ZSxpBghPK">Liat testimoni di TikTok</a> </section> 
+                    </blockquote>
+                </div>
+
+                <div class="tiktok-card">
+                    <blockquote class="tiktok-embed" data-video-id="ZSxpkShEb" style="max-width: 605px;min-width: 325px;" > 
+                        <section> <a target="_blank" href="https://www.tiktok.com/video/ZSxpkShEb">Liat testimoni di TikTok</a> </section> 
+                    </blockquote>
+                </div>
+
+                <div class="tiktok-card">
+                    <blockquote class="tiktok-embed" data-video-id="ZSxpho6Lh" style="max-width: 605px;min-width: 325px;" > 
+                        <section> <a target="_blank" href="https://www.tiktok.com/video/ZSxpho6Lh">Liat testimoni di TikTok</a> </section> 
+                    </blockquote>
+                </div>
+
+            </div>
+        </div>
+
         <div class="extra-container">
             <div class="extra-box">
                 <h3>Layanan Keunggulan Kami:</h3>
@@ -401,6 +465,8 @@
     <a href="https://wa.me/6288224806307?text=Halo%20Rama%20Dhani%20Joki,%20saya%20mau%20order%20joki%20HoK%20dong!" target="_blank" class="floating-wa">
         💬 HUBUNGI KAMI
     </a>
+
+    <script async src="https://www.tiktok.com/embed.js"></script>
 
 </body>
 </html>
